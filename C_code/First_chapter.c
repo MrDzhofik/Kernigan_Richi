@@ -19,12 +19,12 @@
 // Массив символов
 #define MAXLINE 100
 
-int getline(char line[], int maxline);
-void copy(char to[], char from[]);
-int getstr(char line[], int maxline);
-int len(char s[]);
-void reverse(char s[], char f[]);
-void delete_space(char s[]);
+inline int getline(char line[], int maxline);
+inline void copy(char to[], char from[]);
+inline int getstr(char line[], int maxline);
+inline int len(char s[]);
+inline void reverse(char s[], char f[]);
+inline void delete_space(char s[]);
 
 
 int getline(char s[], int lim)
@@ -34,10 +34,9 @@ int getline(char s[], int lim)
 		s[i] = c;
 	}
 	if (c == '\n') {
-		s[i] = c;
+		s[i] = '\0';
 		i++;
 	}
-	s[i] = '\0';
 	return i;
 }
 
